@@ -1,0 +1,39 @@
+body{
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* HOME */
+
+.home{
+  background-image: url("/images/cinema.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home h1{
+  color: #ffffff;
+  font-size: 9em;
+  position: relative;
+  top:0;
+  left: 58%;
+  margin: 0;
+}
+
+.cine{
+ padding-top: 0.8em
+}
+
+.home button{
+  position: relative;
+  top: 60%;
+  left: 58%;
+  margin-top:1em;
+  border-radius: 40px;
+  color:#00B7FF;
+  padding: 0.8em 2em;
+  font-size: 1.5em;
+}
