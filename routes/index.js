@@ -9,12 +9,24 @@ router.get('/', (req, res, next) => res.render('index'));
 router.get('/movies', (req, res, next) => {
     Movie.find()
         .then(allMovieFromDb => {
-            console.log(allMovieFromDb);
-            //res.render('movies', { movies: allMovieFromDb });
+            //console.log("Hello movie", allMovieFromDb);
+            res.render('movies', { movies: allMovieFromDb });
+
         })
         .catch(error => {
             console.log(error);
         });
 })
+/* GET movie page */
+router.get('/movie/:movieId', (req, res, next) => {
+    Movie.findOne({ id: req.params.movieId })
+        .then(oneMovie => {
+            console.log(oneMovie);
+            res.render('movie', { theMovie: oneMovie })
+        })
+        .catch(error => {
+            console.log(error);
+        });
 
+})
 module.exports = router;
